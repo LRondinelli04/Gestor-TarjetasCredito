@@ -1,11 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  MaxValidator,
-  Validators,
-} from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { TarjetaService } from 'src/app/services/tarjeta.service';
 
 @Component({
@@ -13,17 +8,19 @@ import { TarjetaService } from 'src/app/services/tarjeta.service';
   templateUrl: './tarjeta-credito.component.html',
   styleUrls: ['./tarjeta-credito.component.css'],
 })
-export class TarjetaCreditoComponent implements OnInit {
+export class TarjetaCreditoComponent {
+  // Variables
   listTarjetas: any[] = [];
-  form: FormGroup;
   accion = 'Agregar';
+  form: FormGroup;
   id: number | undefined;
 
   constructor(
     private fb: FormBuilder,
-    private _tarjetaService: TarjetaService,
-    readonly _snackBar: MatSnackBar
+    private toastr: ToastrService,
+    private _tarjetaService: TarjetaService
   ) {
+    // Validaciones del formulario
     this.form = this.fb.group({
       titular: ['', Validators.required],
       numeroTarjeta: [
@@ -62,42 +59,61 @@ export class TarjetaCreditoComponent implements OnInit {
   }
 
   guardarTarjeta() {
+    // Guardo los valores ingresados en el formulario en la constante tarjeta
     const tarjeta: any = {
-      titular: this.form.get('titular')?.value,
-      numeroTarjeta: this.form.get('numeroTarjeta')?.value,
-      fechaExpiracion: this.form.get('fechaExpiracion')?.value,
-      cvv: this.form.get('cvv')?.value,
+      titular: this.form.value.titular,
+      numeroTarjeta: this.form.value.numeroTarjeta,
+      fechaExpiracion: this.form.value.fechaExpiracion,
+      cvv: this.form.value.cvv,
     };
 
+    // Si la accion es agregar
     if (this.id == undefined) {
-      //agregamos tarjeta
+      // Agrego una nueva tarjeta
       this._tarjetaService.saveTarjeta(tarjeta).subscribe(
         (data) => {
-          this.alertMessage('Tarjeta Registrada');
+          this.toastr.success(
+            'Se registro correctamente la tarjeta',
+            'Tarjeta Registrada'
+          );
           this.obtenerTarjetas();
           this.form.reset();
         },
         (error) => {
+          this.toastr.error('Error al registrar la tarjeta', 'Error');
           console.log(error);
         }
       );
+
+      // Reseteo el formulario
+      this.form.reset();
     } else {
       tarjeta.id = this.id;
-      //editamos tarjeta
-      this._tarjetaService.updateTarjeta(this.id, tarjeta).subscribe((data) => {
-        this.form.reset();
-        this.accion = 'Agregar';
-        this.id = undefined;
-        this.alertMessage('Tarjeta Actualizada');
-        this.obtenerTarjetas();
-      });
+      // Edito la tarjeta
+      this._tarjetaService.updateTarjeta(this.id, tarjeta).subscribe(
+        (data) => {
+          this.form.reset();
+          this.accion = 'Agregar';
+          this.id = undefined;
+          this.toastr.info('Se actualizo correctamente la tarjeta', 'Tarjeta Actualizada');
+          // Cargo nuevamente las tartejas
+          this.obtenerTarjetas();
+        },
+        (error) => {
+          this.toastr.error('Error al actualizar la tarjeta', 'Error');
+          console.log(error);
+        }
+      );
     }
   }
 
-  eliminarTarjeta(id: number) {
-    this._tarjetaService.deleteTarjeta(id).subscribe(
+  eliminarTarjeta(index: number) {
+    this._tarjetaService.deleteTarjeta(index).subscribe(
       (data) => {
-        this.alertMessage('Tarjeta Eliminada');
+        this.toastr.error(
+          'Se elimino correctamente la tarjeta',
+          'Tarjeta Eliminada'
+        );
         this.obtenerTarjetas();
       },
       (error) => {
@@ -108,20 +124,15 @@ export class TarjetaCreditoComponent implements OnInit {
 
   editarTarjeta(tarjeta: any) {
     this.accion = 'Editar';
+    // Seteo el id con el id de la tarjeta seleccionada
     this.id = tarjeta.id;
 
+    // Seteo los valores de la tarjeta seleccionada en el formulario para luego poder editarlo
     this.form.patchValue({
       titular: tarjeta.titular,
       numeroTarjeta: tarjeta.numeroTarjeta,
       fechaExpiracion: tarjeta.fechaExpiracion,
       cvv: tarjeta.cvv,
-    });
-  }
-
-  alertMessage(text: string) {
-    this._snackBar.open(`${text}`, '', {
-      duration: 3000,
-      horizontalPosition: 'right',
     });
   }
 }
