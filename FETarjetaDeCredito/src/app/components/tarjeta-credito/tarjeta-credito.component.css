@@ -1,0 +1,30 @@
+img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  max-width: fit-content;
+}
+
+.card {
+  margin: 15px;
+}
+
+.far {
+  cursor: pointer;
+}
+
+table i {
+  transition: all 0.3s ease;
+}
+
+table i:hover {
+  scale: 1.2;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.green-icon {
+  color: #198754;
+}
+.red-icon {
+  color: #dc3545;
+}

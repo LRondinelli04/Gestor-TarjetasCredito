@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETarjetaDeCredito", "BETarjetaDeCredito\BETarjetaDeCredito.csproj", "{78515304-6D1E-4CC9-8777-310A0EB74868}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78515304-6D1E-4CC9-8777-310A0EB74868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78515304-6D1E-4CC9-8777-310A0EB74868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78515304-6D1E-4CC9-8777-310A0EB74868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78515304-6D1E-4CC9-8777-310A0EB74868}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E096FA7-391D-47A2-8C8B-074F510142B2}
+	EndGlobalSection
+EndGlobal
