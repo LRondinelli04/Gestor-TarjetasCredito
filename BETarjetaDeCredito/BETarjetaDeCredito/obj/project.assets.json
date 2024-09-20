@@ -4523,27 +4523,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lrondinelli\\.nuget\\packages\\": {}
+    "C:\\Users\\Rondinelli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lrondinelli\\Desktop\\LRondinelli\\Fiscalia-de-Estado\\Angular\\proyectoTarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito.csproj",
+      "projectUniqueName": "C:\\Users\\Rondinelli\\OneDrive\\Escritorio\\Repositorios\\Gestor-TarjetasCredito\\BETarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito.csproj",
       "projectName": "BETarjetaDeCredito",
-      "projectPath": "C:\\Users\\lrondinelli\\Desktop\\LRondinelli\\Fiscalia-de-Estado\\Angular\\proyectoTarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito.csproj",
-      "packagesPath": "C:\\Users\\lrondinelli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lrondinelli\\Desktop\\LRondinelli\\Fiscalia-de-Estado\\Angular\\proyectoTarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito\\obj\\",
+      "projectPath": "C:\\Users\\Rondinelli\\OneDrive\\Escritorio\\Repositorios\\Gestor-TarjetasCredito\\BETarjetaDeCredito\\BETarjetaDeCredito\\BETarjetaDeCredito.csproj",
+      "packagesPath": "C:\\Users\\Rondinelli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rondinelli\\OneDrive\\Escritorio\\Repositorios\\Gestor-TarjetasCredito\\BETarjetaDeCredito\\BETarjetaDeCredito\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lrondinelli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Rondinelli\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4605,7 +4602,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
