@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BETarjetaDeCredito")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11b527a4c32d9b4043feb12a97e96386487fc48e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41988f84b80bc64dc608670e661d1eaf96951585")]
 [assembly: System.Reflection.AssemblyProductAttribute("BETarjetaDeCredito")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BETarjetaDeCredito")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

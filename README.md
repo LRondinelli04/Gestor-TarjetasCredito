@@ -19,6 +19,9 @@ El Gestor de Tarjetas de Crédito permite a los usuarios agregar, validar y gest
 
 - **Framework**: .NET
 - **Lenguaje**: C#
+- **Base de Datos**: SQL Server
+
+El backend utiliza SQL Server para el almacenamiento de la información de las tarjetas de crédito.
 
 ## Requisitos Previos
 
@@ -27,6 +30,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 - Node.js
 - Angular CLI
 - .NET SDK
+- SQL Server
 
 ## Instalación
 
@@ -51,7 +55,7 @@ cd gestor-tarjetas-credito
 
 ## Uso
 
-1. Abre tu navegador y navega a http://localhost:4200 para acceder a la aplicación frontend.
+1. Abre tu navegador y navega a http://localhost:[codigo indicado por la terminal] para acceder a la aplicación frontend.
 2. Utiliza la interfaz para agregar, validar y gestionar tarjetas de crédito.
 
 ## Estructura del Proyecto
