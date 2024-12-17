@@ -57,6 +57,7 @@ cd gestor-tarjetas-credito
 
 1. Abre tu navegador y navega a http://localhost:[puerto_disponible] para acceder a la aplicación frontend.
 2. Utiliza la interfaz para agregar, validar y gestionar tarjetas de crédito.
+3. Generar conexión manual a una base de datos (SQL Server)
 
 ## Estructura del Proyecto
 
